@@ -10,3 +10,6 @@ Route::get('/', function () {
     // return $cars;
 
 });
+Route::get('/about-us', function () {
+    return view('about-us');
+});

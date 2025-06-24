@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-3 text-menu">
                 <li class="nav-item">
-                    <a class="nav-link active rounded-pill px-3" href="./index.html">Home</a>
+                    <a class="nav-link  rounded-pill px-3" href="{{url('/')}}">Home</a>
                 </li>
                 <!-- <li class="nav-item">
                         <a class="nav-link rounded-pill px-3" href="#">Rent a Car</a>
@@ -21,7 +21,7 @@
                     <a class="nav-link rounded-pill px-3" href="#!">How it Works</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link rounded-pill px-3" href="./about-us.html">About US</a>
+                    <a class="nav-link rounded-pill px-3" href="{{ url('/about-us') }}">About US</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link rounded-pill px-3" href="#">Services</a>
