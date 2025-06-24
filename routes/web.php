@@ -1,13 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use  App\Http\Controllers\CarController;
+use Illuminate\Support\Facades\DB;
 
 Route::get('/', function () {
     // $cars = DB::select('SELECT * FROM cars');
-    $cars = DB::table('cars')->simplePaginate(3);
+    $cars = DB::table('cars')->simplePaginate(5);
     return view('homepage', ['cars' => $cars]);
-   
+    // return $cars;
+
 });
-
-
