@@ -2,16 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 
 class CarController extends Controller
 {
-    //
-    // function showCars(){
-    //     // fetch cars from the database
-    //   $cars =  DB::select('SELECT * FROM cars');
-    //     return view('showcars', ['cars' => $cars]);
-    //     // return $cars;
-    // }
+    function admin(){
+        $cars = DB::table('cars')->simplePaginate(5);
+        return view('admin.adminDashboard', ['cars' => $cars]);
+    } 
+    function addCar(){
+        
+    }
+    function delete($id){
+        echo "Deleting car with ID: $id";
+        DB::table('cars')->where('id', $id)->delete();
+        return redirect('/admin');
+    }
+
 }

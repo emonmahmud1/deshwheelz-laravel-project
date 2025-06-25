@@ -1,5 +1,4 @@
 <div class="row g-0 g-md-4">
-<!-- {{json_encode($cars, JSON_PRETTY_PRINT);}} -->
     <!-- Service Item 01 -->
     @foreach ($cars as $car)
     <div class="col-12">
